@@ -6,7 +6,7 @@ output "output" {
   value = var.x
 }
 
-variable "v" {
+variable "v_map" {
   default = {
     x = 10
     y = 20
@@ -14,7 +14,7 @@ variable "v" {
 }
 
 output "output_1" {
-  value = var.v["x"]
+  value = var.v_map["x"] # Mapping
 }
 
 variable "z" {
